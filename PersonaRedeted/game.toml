@@ -1,0 +1,24 @@
+[game]
+name = "Megami Ibunroku Persona"
+id = "SLPS-00500"
+exe = "input/SLPS_005.00"
+# disc = "C:/path/to/your Persona-TL-QoL patched .cue"   (optional; without it the exe asks and remembers it in disc.cfg)
+load_address = "0x80010000"
+entry_pc = "0x80011930"
+text_size = "0x46000"
+stack_base = "0x801FFFF0"
+
+[recompiler]
+seeds = "seeds/functions.txt"
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+strict = true
+out_dir = "generated"
+
+[runtime]
+window_title = "Megami Ibunroku Persona (patched disc)"
+bios_hle = false
+overlay_cache = true
+fast_boot = true          # skip the Sony BIOS boot animation (BIOS setup and game load still run)
+
+[video]
+renderer = "opengl"
